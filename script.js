@@ -37,4 +37,29 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = mailto;
         });
     }
+
+    // Intro video handling
+    const introOverlay = document.getElementById('intro-overlay');
+    const introVideo = document.getElementById('intro-video');
+
+    if (introOverlay && introVideo) {
+        // Prevent scrolling while intro is visible
+        document.body.style.overflow = 'hidden';
+
+        const finishIntro = () => {
+            introOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+            // Stop video to save resources
+            setTimeout(() => {
+                introVideo.pause();
+                introOverlay.remove();
+            }, 800);
+        };
+
+        // When video ends
+        introVideo.addEventListener('ended', finishIntro);
+
+        // Allow skipping by clicking
+        introOverlay.addEventListener('click', finishIntro);
+    }
 });
