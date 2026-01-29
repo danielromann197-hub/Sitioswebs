@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contacto — Calle 7 Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-dark">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="44" height="44" rx="6" fill="#0D0D0D" stroke="#FFD600" stroke-width="2" />
+                    <text x="50%" y="56%" text-anchor="middle" fill="#FFD600" font-family="Anton, sans-serif"
+                        font-size="22">7</text>
+                </svg>
+                <span class="logo-text">Calle 7 Studio</span>
+            </a>
+
+            <nav class="nav">
+                <a href="redes.html">Redes</a>
+                <a href="web.html">Páginas Web</a>
+                <a href="ecommerce.html">E-commerce</a>
+                <a href="contacto.html" class="cta">Contacto</a>
+            </nav>
+
+            <button class="nav-toggle" aria-label="Abrir menú" id="navToggle">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero reveal">
+            <div class="container">
+                <h1>Hablemos</h1>
+                <p class="lead">Cuéntanos tu proyecto y te mandamos una propuesta con calle.</p>
+            </div>
+        </section>
+
+        <section class="container reveal">
+            <div class="grid-2">
+                <form id="contactForm" class="contact-form">
+                    <label>Nombre</label>
+                    <input type="text" id="name" required placeholder="Tu nombre" />
+                    <label>Negocio / Proyecto</label>
+                    <input type="text" id="business" placeholder="Nombre del negocio" />
+                    <label>Email</label>
+                    <input type="email" id="email" required placeholder="tu@correo.com" />
+                    <label>Mensaje</label>
+                    <textarea id="message" rows="5" placeholder="Cuéntanos qué necesitas"></textarea>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <p class="muted">O escríbenos directo: <a
+                            href="mailto:hola@calle7studio.com">hola@calle7studio.com</a></p>
+                </form>
+
+                <div class="contact-info">
+                    <h3>¿Prefieres WhatsApp?</h3>
+                    <p>+52 1 XX XXX XXXX (ejemplo)</p>
+                    <h3>Oficina</h3>
+                    <p>CDMX – Horario 9:00–18:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>Calle 7 Studio</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

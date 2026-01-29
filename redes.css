@@ -1,0 +1,56 @@
+/* Service Hero - Specific Background */
+.service-hero {
+    position: relative;
+    padding: 100px 0 60px;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 0px;
+}
+
+.service-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* The image + gradient overlay */
+    background: linear-gradient(180deg, rgba(13, 13, 13, 0.7) 0%, rgba(13, 13, 13, 0.5) 60%, rgba(13, 13, 13, 1) 100%),
+        url('assets/hero-street.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.service-hero h1 {
+    font-family: Anton, sans-serif;
+    font-size: 4rem;
+    color: var(--white);
+    margin: 0;
+    line-height: 1.1;
+    /* Strong Yellow Glow */
+    text-shadow: 0 0 25px rgba(255, 214, 0, 0.6), 0 0 10px rgba(255, 214, 0, 0.8);
+}
+
+.service-hero .lead {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 20px auto 0;
+    color: #e0e0e0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Page specific overrides for Redes & Web */
+body.page-redes,
+body.page-web {
+    background: var(--black) !important;
+    background-image: none !important;
+}
+
+body.page-redes .site-header,
+body.page-web .site-header {
+    background: rgba(13, 13, 13, 0.95);
+}
