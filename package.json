@@ -2,16 +2,13 @@
   "name": "calle-7-studio",
   "private": true,
   "version": "1.0.0",
-  "description": "Calle 7 Studio Website",
-  "main": "index.html",
+  "type": "module",
   "scripts": {
-    "start": "serve",
-    "build": "echo 'No build step required for static site'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "serve": "^14.0.0"
+  "devDependencies": {
+    "vite": "^5.0.0"
   }
 }
