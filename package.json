@@ -1,0 +1,17 @@
+{
+  "name": "calle-7-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Calle 7 Studio Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.0.0"
+  }
+}
