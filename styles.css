@@ -573,8 +573,8 @@ a {
 
 /* reveal animation */
 .reveal {
-    opacity: 0;
-    transform: translateY(18px);
+    opacity: 1;
+    transform: none;
     transition: all .6s cubic-bezier(.2, .9, .3, 1)
 }
 
