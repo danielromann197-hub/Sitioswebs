@@ -43,23 +43,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const introVideo = document.getElementById('intro-video');
 
     if (introOverlay && introVideo) {
-        // Prevent scrolling while intro is visible
-        document.body.style.overflow = 'hidden';
+        // Check if we've seen the intro in this session
+        if (sessionStorage.getItem('introSeen')) {
+            introOverlay.style.display = 'none';
+            introOverlay.remove();
+        } else {
+            // Prevent scrolling while intro is visible
+            document.body.style.overflow = 'hidden';
 
-        const finishIntro = () => {
-            introOverlay.classList.add('hidden');
-            document.body.style.overflow = '';
-            // Stop video to save resources
-            setTimeout(() => {
-                introVideo.pause();
-                introOverlay.remove();
-            }, 800);
-        };
+            const finishIntro = () => {
+                introOverlay.classList.add('hidden');
+                document.body.style.overflow = '';
 
-        // When video ends
-        introVideo.addEventListener('ended', finishIntro);
+                // Mark as seen
+                sessionStorage.setItem('introSeen', 'true');
 
-        // Allow skipping by clicking
-        introOverlay.addEventListener('click', finishIntro);
+                // Stop video to save resources
+                setTimeout(() => {
+                    introVideo.pause();
+                    introOverlay.remove();
+                }, 800);
+            };
+
+            // When video ends
+            introVideo.addEventListener('ended', finishIntro);
+
+            // Allow skipping by clicking
+            introOverlay.addEventListener('click', finishIntro);
+        }
     }
 });
